@@ -1,0 +1,7 @@
+img.w-auto {
+  width: 100%;
+}
+.shopbutton {
+  display: flex;
+  justify-content: space-evenly;
+}

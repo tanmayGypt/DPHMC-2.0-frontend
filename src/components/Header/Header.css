@@ -1,0 +1,301 @@
+.atf_36 {
+  font-family: Nunito, sans-serif;
+}
+
+.atf_36 .text-blk {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  line-height: 25px;
+}
+
+.atf_36 input:focus {
+  outline-color: initial;
+  outline-style: none;
+  outline-width: initial;
+}
+
+.atf_36 .responsive-container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  justify-content: flex-start;
+}
+
+.atf_36 .responsive-container-block.big-container {
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  min-height: 800px;
+  background-size: cover;
+  align-items: center;
+  background-color: rgba(21, 21, 21, 0.7);
+  flex-direction: column;
+  justify-content: center;
+}
+
+.atf_36 .imgBG {
+  background-image: url("https://i0.wp.com/businessday.ng/wp-content/uploads/2021/06/medical.jpg?fit=700%2C401&ssl=1");
+  background-size: cover;
+}
+
+.atf_36 .responsive-container-block.container {
+  max-width: 1320px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  color: white;
+  text-decoration-line: none;
+  text-decoration-thickness: initial;
+  text-decoration-style: initial;
+  text-decoration-color: initial;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  margin-top: 120px;
+  margin-right: auto;
+  margin-bottom: 150px;
+  margin-left: auto;
+}
+
+.atf_36 .text-blk.landing10-head {
+  font-size: 40px;
+  line-height: 55px;
+  font-weight: 700;
+  max-width: 750px;
+  margin-top: -61px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+  margin-left: 0px;
+}
+
+.atf_36 .text-blk.landing10-subhead {
+  max-width: 790px;
+  font-size: 25px;
+  line-height: 35px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 45px;
+  margin-left: 0px;
+}
+
+.atf_36 .input-box {
+  max-width: 650px;
+  width: 100%;
+}
+
+.atf_36 .landing-button {
+  height: auto;
+  width: auto;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  background-color: #f49892;
+  cursor: pointer;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-top-style: outset;
+  border-right-style: outset;
+  border-bottom-style: outset;
+  border-left-style: outset;
+  border-top-color: #767676;
+  border-right-color: #767676;
+  border-bottom-color: #767676;
+  border-left-color: #767676;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-top: 17px;
+  padding-right: 60px;
+  padding-bottom: 17px;
+  padding-left: 60px;
+  line-height: 27px;
+}
+
+.atf_36 .landing-button:hover {
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: #f49832;
+}
+
+.atf_36 .text-blk.onlineEducation {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+}
+
+.atf_36 .btn {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+.atf_36 .downArrowImg {
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  width: 40px;
+  height: 75px;
+  cursor: pointer;
+}
+
+.atf_36 #iuy3u {
+  margin: 0 auto 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .atf_36 .responsive-container-block.big-container {
+    background-size: contain;
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+  }
+
+  .atf_36 .responsive-container-block.big-container {
+    background-size: cover;
+  }
+
+  .atf_36 .responsive-container-block.big-container {
+    background-position-x: 50%;
+    background-position-y: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .atf_36 .responsive-container-block.big-container {
+    background-size: cover;
+  }
+
+  .atf_36 .text-blk.landing10-head {
+    font-size: 36px;
+    line-height: 45px;
+  }
+
+  .atf_36 .text-blk.landing10-subhead {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .atf_36 .text-blk.landing10-subhead {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 40px;
+    margin-left: 0px;
+  }
+
+  .atf_36 .responsive-container-block.big-container {
+    background-position-x: 50%;
+    background-position-y: 50%;
+  }
+
+  .atf_36 .text-blk.landing10-head {
+    font-size: 40px;
+    line-height: 55px;
+  }
+
+  .atf_36 .text-blk.landing10-subhead {
+    font-size: 25px;
+    line-height: 34px;
+  }
+}
+
+@media (max-width: 500px) {
+  .atf_36 .landing-button {
+    width: 100%;
+  }
+
+  .atf_36 .responsive-container-block.big-container {
+    background-position-x: 50%;
+    background-position-y: 50%;
+  }
+
+  .atf_36 .responsive-container-block.big-container {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+  }
+
+  .atf_36 .text-blk.landing10-head {
+    font-size: 25px;
+    line-height: 34px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+  }
+
+  .atf_36 .text-blk.landing10-subhead {
+    font-size: 20px;
+    line-height: 27px;
+  }
+
+  .atf_36 .text-blk.onlineEducation {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+  }
+
+  .atf_36 .responsive-container-block.container {
+    margin-top: 43px;
+    margin-right: 0px;
+    margin-bottom: 150px;
+    margin-left: 0px;
+  }
+
+  .atf_36 .text-blk.landing10-subhead {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+img#logo1 {
+  width: 52%;
+}
