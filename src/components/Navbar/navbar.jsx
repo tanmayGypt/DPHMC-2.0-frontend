@@ -22,18 +22,6 @@ export default function Navbar() {
           </span>
         </Link>
         <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <button className="flex mx-2 font-semibold whitespace-nowrap dark:text-white">
-            <BsCartPlusFill />
-            <Link to="/cart" className="mx-2">
-              View Cart
-            </Link>
-            <Link to="/Orders" className="mx-2">
-              My Orders
-            </Link>
-            <Link to="/Login" className="mx-4">
-              Login
-            </Link>
-          </button>
           <button
             type="button"
             className="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
@@ -50,55 +38,6 @@ export default function Navbar() {
               alt="user photo"
             />
           </button>
-          {ShowUser ? (
-            <div
-              className="z-50 my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
-              id="user-dropdown"
-            >
-              <div className="px-4 py-3">
-                <span className="block text-sm text-gray-900 dark:text-white">
-                  Bonnie Green
-                </span>
-                <span className="block text-sm  text-gray-500 truncate dark:text-gray-400">
-                  name@flowbite.com
-                </span>
-              </div>
-              <ul className="py-2" aria-labelledby="user-menu-button">
-                <li>
-                  <Link
-                    to="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                  >
-                    Dashboard
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                  >
-                    Settings
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                  >
-                    Earnings
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                  >
-                    Sign out
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          ) : null}
 
           <button
             data-collapse-toggle="navbar-user"
@@ -192,9 +131,82 @@ export default function Navbar() {
                 About
               </Link>
             </li>
+            <li>
+              <Link
+                to="/cart"
+                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              >
+                View Cart
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/Orders"
+                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              >
+                My Orders
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/Login"
+                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              >
+                Login
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
+      {ShowUser ? (
+        <div
+          className="z-50 my-4 text-base flex flex-col list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600 max-w-min ml-auto mr-10 w-min"
+          id="user-dropdown"
+        >
+          <div className="px-4 py-3 flex flex-col">
+            <span className="block text-sm text-gray-900 dark:text-white">
+              Bonnie Green
+            </span>
+            <span className="block text-sm  text-gray-500 truncate dark:text-gray-400">
+              name@flowbite.com
+            </span>
+          </div>
+          <ul className="py-2" aria-labelledby="user-menu-button">
+            <li>
+              <Link
+                to="#"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+              >
+                Dashboard
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="#"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+              >
+                Settings
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="#"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+              >
+                Earnings
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="#"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+              >
+                Sign out
+              </Link>
+            </li>
+          </ul>
+        </div>
+      ) : null}
     </nav>
   );
 }

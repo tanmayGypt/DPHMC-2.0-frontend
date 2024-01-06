@@ -3,14 +3,16 @@ import "../Navbar/global.css";
 export default function CurrentAddress() {
   return (
     <>
-      <h3 className="text-center font-medium text-xl mt-5 mb-4">
-        Registered Addresses
-      </h3>
-      <button className=" text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
-        <Link to="/addNewAddress">Add New Address</Link>
-      </button>
+      <div className="flex flex-col">
+        <h3 className="text-center font-medium text-xl mt-5 mb-4">
+          Registered Addresses
+        </h3>
+        <button className=" text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded mx-auto">
+          <Link to="/addNewAddress">Add New Address</Link>
+        </button>
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full mb-24">
-        <div className="relative mx-auto w-full">
+        <div className="relative mx-auto w-4/5">
           <a
             href="/product_description"
             className="relative inline-block duration-300 ease-in-out transition-transform transform hover:-translate-y-2 w-full"

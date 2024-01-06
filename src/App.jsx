@@ -15,7 +15,7 @@ import Navbar from "./components/Navbar/navbar";
 import Cart from "./components/Cart/Cart";
 import SingleProduct from "./components/SingleProductDesc/SingleProductDesc";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import { useState } from "react";
 import Testimonials from "./components/Testimonials/Testimonials";
 import AddAddressForm from "./components/AddAddressForm/AddAddressForm";
 import SignUp from "./components/SignUp/SignUp";
@@ -25,7 +25,10 @@ import OrderConfirmation from "./components/orderConfirmation/confirmation";
 import CurrentAddress from "./components/CurrentAddress/CurrentAddress";
 import UserContextProvider from "../context/Provider";
 import MyOrders from "./components/MyOrders/MyOrders";
-
+import LoadingBar from "react-top-loading-bar";
+import BlogView from "./components/BlogView/BlogView";
+import BlogBox from "./components/Blogs/BlogBox";
+import ContactSection from "./components/GetInTouch/GIT";
 function OrderConfirmationPage() {
   return (
     <>
@@ -128,14 +131,22 @@ function Reviews() {
 }
 
 function App() {
+  const [progress, setProgress] = useState(0);
   return (
     <div className="App">
       <UserContextProvider>
         <Router>
           <Navbar />
+          <LoadingBar
+            color="red"
+            progress={progress}
+            onLoaderFinished={() => setProgress(0)}
+          />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/About" element={<AboutPageNew />} />
+            <Route path="/getInTouch" element={<ContactSection />} />
+            <Route path="/MyBlogs" element={<BlogView />} />
             <Route path="/Appointment" element={<Appointment />} />
             <Route path="/Reviews" element={<Reviews />} />
             <Route path="/Login" element={<LoginPage />} />

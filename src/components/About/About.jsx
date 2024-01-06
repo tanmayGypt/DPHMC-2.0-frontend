@@ -1,5 +1,5 @@
 import "../Navbar/global.css";
-
+import { Link } from "react-router-dom";
 export default function About() {
   return (
     <>
@@ -28,12 +28,12 @@ export default function About() {
                 veniamLorem ipsum dolor sit amet, consectetur adipiscing elit,
                 sed do eiusmod tempor
               </p>
-              <a
-                href="#"
+              <Link
+                to="/Appointment"
                 className="px-4 py-3 text-blue-700 transition-all transform border border-blue-500 rounded-3xl hover:bg-blue-600 dark:border-blue-400 dark:hover:bg-blue-500 dark:hover:text-gray-100 dark:hover:border-blue-500 dark:text-blue-400 hover:text-gray-100"
               >
                 Book An Appointment
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,8 +1,10 @@
 import "../Navbar/global.css";
 import Faq from "../FAQ/FAQ.jsx";
 import Reviews from "../Ratings_and _Reviews/Reviews.jsx";
-
+import { Link } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
 export default function SingleProduct() {
+  const notify = () => toast.success("Item Added to Cart");
   return (
     <>
       <section className="text-gray-700 body-font overflow-hidden bg-white">
@@ -119,11 +121,15 @@ export default function SingleProduct() {
                 <span className="title-font font-medium text-2xl text-gray-900">
                   Rs.580.00
                 </span>
-                <button className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
-                  Add to Cart
+                <button
+                  onClick={notify}
+                  className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded"
+                >
+                  Add To Cart
                 </button>
+                <Toaster />
                 <button className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
-                  Buy Now
+                  <Link to="/currentAddress">Buy Now</Link>
                 </button>
               </div>
             </div>

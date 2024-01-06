@@ -1,63 +1,55 @@
-import { useState } from "react";
 export default function Cart_Items() {
-  const [Quantity, SetQuantity] = useState(1);
-  function Increased() {
-    SetQuantity(Quantity + 1);
-  }
-  function Decreased() {
-    if (Quantity > 1) {
-      SetQuantity(Quantity - 1);
-    }
-  }
   return (
     <>
-      <div className="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
-        <div className="flex w-2/5">
-          <div className="w-20">
-            <img
-              className="h-24"
-              src="https://drive.google.com/uc?id=18KkAVkGFvaGNqPy2DIvTqmUH_nk39o3z"
-              alt=""
-            />
+      <div className="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start duration-300 ease-in-out transition-transform transform hover:scale-105">
+        <img
+          src="https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+          alt="product-image"
+          className="w-full rounded-lg sm:w-40"
+        />
+        <div className="sm:ml-4 sm:flex sm:w-full sm:justify-between">
+          <div className="mt-5 sm:mt-0">
+            <h2 className="text-lg font-bold text-gray-900">
+              Nike Air Max 2019
+            </h2>
+            <p className="mt-1 text-xs text-gray-700">36EU - 4US</p>
           </div>
-          <div className="flex flex-col justify-between ml-4 flex-grow">
-            <span className="font-bold text-sm">Iphone 6S</span>
-            <span className="text-red-500 text-xs">Apple</span>
-            <a
-              href="#"
-              className="font-semibold hover:text-red-500 text-gray-500 text-xs"
-            >
-              Remove
-            </a>
+          <div className="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
+            <div className="flex items-center border-gray-100">
+              <span className="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50">
+                {" "}
+                -{" "}
+              </span>
+              <input
+                className="h-8 w-8 border bg-white text-center text-xs outline-none"
+                type="number"
+                value="2"
+                min="1"
+              />
+              <span className="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50">
+                {" "}
+                +{" "}
+              </span>
+            </div>
+            <div className="flex items-center space-x-4">
+              <p className="text-sm">259.000 ₭</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="h-5 w-5 cursor-pointer duration-150 hover:text-red-500"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </div>
           </div>
         </div>
-        <div className="flex justify-center w-1/5">
-          <svg
-            className="fill-current text-gray-600 w-3"
-            viewBox="0 0 448 512"
-            onClick={Decreased}
-          >
-            <path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
-          </svg>
-          <input
-            className="mx-2 border text-center w-8"
-            type="text"
-            value={Quantity}
-          />
-          <svg
-            className="fill-current text-gray-600 w-3"
-            viewBox="0 0 448 512"
-            onClick={Increased}
-          >
-            <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
-          </svg>
-        </div>
-        <span className="text-center w-1/5 font-semibold text-sm">
-          Rs.400.00
-        </span>
-        <span className="text-center w-1/5 font-semibold text-sm">
-          Rs.400.00
-        </span>
       </div>
     </>
   );

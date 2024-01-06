@@ -1,3 +1,4 @@
+import ContactSection from "../GetInTouch/GIT";
 export default function AboutPage() {
   return (
     <>
@@ -36,6 +37,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      <ContactSection />
     </>
   );
 }

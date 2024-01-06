@@ -4,98 +4,57 @@ import { useContext } from "react";
 import Search_Cart from "./Search_Cart";
 import UserContext from "../../../context/userProvider";
 import Cart_Items from "./CartItems";
+import { Link } from "react-router-dom";
 export default function Cart() {
   const { Cart } = useContext(UserContext);
+
   return (
     <>
       <UserContextProvider>
         <Search_Cart />
-        <body className="bg-gray-100">
-          <div className="container mx-auto mt-10">
-            <div className=" flex shadow-md my-10">
-              <div className="w-3/4 bg-white px-10 py-10">
-                <div className="flex justify-between border-b pb-8">
-                  <h1 className="font-semibold text-2xl">Shopping Cart</h1>
-                  <h2 className="font-semibold text-2xl">
-                    {Cart.length} Items
-                  </h2>
-                </div>
-                <div className="flex mt-10 mb-5">
-                  <h3 className="font-semibold text-gray-600 text-xs uppercase w-2/5">
-                    Product Details
-                  </h3>
-                  <h3 className="font-semibold text-gray-600 text-xs uppercase w-1/5 text-center">
-                    Quantity
-                  </h3>
-                  <h3 className="font-semibold text-gray-600 text-xs uppercase w-1/5 text-center">
-                    Price
-                  </h3>
-                  <h3 className="font-semibold text-gray-600 text-xs uppercase w-1/5 text-center">
-                    Total
-                  </h3>
-                </div>
+        <div className="h-screen bg-gray-100 mb-5 mt-5">
+          <h1 className="mb-10 text-center text-2xl font-bold">Cart Items</h1>
+          <div className="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
+            <div className="rounded-lg md:w-2/3">
+              {/* Product 1 */}
+              <Cart_Items />
+              <Cart_Items />
+              <Cart_Items />
+              <Cart_Items />
+              <Cart_Items />
+              <Cart_Items />
+              <Cart_Items />
 
-                {/* Repeat the following block for each product */}
-                <Cart_Items />
-                {/* End of product block */}
+              <Cart_Items />
 
-                {/* Repeat the above block for other products */}
+              {/* Product 2 (same structure for each product) */}
+              {/* ... */}
+            </div>
 
-                <a
-                  href="#"
-                  className="flex font-semibold text-indigo-600 text-sm mt-10"
-                >
-                  <svg
-                    className="fill-current mr-2 text-indigo-600 w-4"
-                    viewBox="0 0 448 512"
-                  >
-                    <path d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z" />
-                  </svg>
-                  Continue Shopping
-                </a>
+            {/* Subtotal */}
+            <div className="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
+              <div className="mb-2 flex justify-between">
+                <p className="text-gray-700">Subtotal</p>
+                <p className="text-gray-700">$129.99</p>
               </div>
-
-              <div id="summary" className="w-1/4 px-8 py-10">
-                <h1 className="font-semibold text-2xl border-b pb-8">
-                  Order Summary
-                </h1>
-                <div className="flex justify-between mt-10 mb-5">
-                  <span className="font-semibold text-sm uppercase">
-                    Items 3
-                  </span>
-                  <span className="font-semibold text-sm">Rs.590</span>
-                </div>
-
-                <div className="py-10">
-                  <label
-                    htmlFor="promo"
-                    className="font-semibold inline-block mb-3 text-sm uppercase"
-                  >
-                    Promo Code
-                  </label>
-                  <input
-                    type="text"
-                    id="promo"
-                    placeholder="Enter your code"
-                    className="p-2 text-sm w-full"
-                  />
-                </div>
-                <button className="bg-red-500 hover:bg-red-600 px-5 py-2 text-sm text-white uppercase">
-                  Apply
-                </button>
-                <div className="border-t mt-8">
-                  <div className="flex font-semibold justify-between py-6 text-sm uppercase">
-                    <span>Total cost</span>
-                    <span>Rs.600</span>
-                  </div>
-                  <button className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">
-                    Checkout
-                  </button>
+              <div className="flex justify-between">
+                <p className="text-gray-700">Shipping</p>
+                <p className="text-gray-700">$4.99</p>
+              </div>
+              <hr className="my-4" />
+              <div className="flex justify-between">
+                <p className="text-lg font-bold">Total</p>
+                <div className="">
+                  <p className="mb-1 text-lg font-bold">$134.98 USD</p>
+                  <p className="text-sm text-gray-700">including VAT</p>
                 </div>
               </div>
+              <button className="mt-6 w-full rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600">
+                <Link to="/CurrentAddress">CheckOut</Link>
+              </button>
             </div>
           </div>
-        </body>
+        </div>
       </UserContextProvider>
     </>
   );

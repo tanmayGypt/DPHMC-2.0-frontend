@@ -1,17 +1,13 @@
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { Link } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
 
+import { Link } from "react-router-dom";
+const notify = () => toast.success("Item Added to Cart");
 export default function Items() {
-  const notify = () => toast("Item Added to cart succesfully");
   return (
     <>
-      <div className="relative mx-auto w-full">
+      <div className="relative mx-auto w-full duration-300 ease-in-out transition-transform transform hover:scale-105">
         <div className="shadow p-4 rounded-lg bg-white">
-          <a
-            href="/product_description"
-            className="relative inline-block duration-300 ease-in-out transition-transform transform hover:-translate-y-2 w-full"
-          >
+          <Link to="/product_description" className="relative inline-block ">
             <div className="flex justify-center relative rounded-lg overflow-hidden h-52">
               <img
                 className="productImage"
@@ -49,7 +45,7 @@ export default function Items() {
                 Save Extra With Combo Offers
               </div>
             </div>
-          </a>
+          </Link>
 
           <div className="flex mt-2 shopbutton">
             <div
@@ -57,7 +53,7 @@ export default function Items() {
               onClick={notify}
             >
               <button>Add To Cart</button>
-              <ToastContainer />
+              <Toaster />
             </div>
 
             <Link
